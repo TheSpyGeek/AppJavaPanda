@@ -2,12 +2,27 @@
 
 ### Réalisé par Maxime Isnel et Victor Baverel
 
+## Requis
+
+* Java 8
+* Maven
+
+## L'application java Panda
+
+L'application utilise la librairie Java Panda (https://github.com/TheSpyGeek/DevOps_Project) à un moment donné. Elle n'utilise pas forcément la dernière version. L'application donne un exemple des fonctionnalités offertes par la librairie sur un fichier.
+
+Pour l'utiliser il faut compiler l'application avec mvn package à la racine du projet, cela va vous créer un jar executable que vous pouvez executer avec la commande;
+java -jar target/AppJavaPanda-1.0-jar-with-dependencies.jar
+
+L'application va aller chercher le fichier "file.csv" dans le dossier courant pour faire les statistiques dessus.
+
+Le dossier "FileTest" contient un exemple de fichier sur lequel vous pouvez executer l'application.
 
 ## Docker
 
 ##### Assurez vous de disposer de la dernière version de dockers -> https://docs.docker.com/install/
 
-sudo docker run --mount type=bind,source="$(pwd)"/FileTest,target=/AppJavaPanda/ressources javapanda
+sudo docker run --mount type=bind,source="$(pwd)"/FileTest,target=/AppJavaPanda/ressources thespygeek/javapanda
 
 Où FileTest est un dossier (chemin absolu) contenant un fichier "file.csv" sur lequel des stats vont être faites
 
