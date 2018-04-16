@@ -9,7 +9,7 @@ import java.util.Scanner;
 class App {
 	public static void main(String args[]){
         try {
-            DataFrame df = new DataFrame("/FileTest/file.csv");
+            DataFrame df = new DataFrame("/AppJavaPanda/ressources/file.csv");
 
             ArrayList<String> labels = df.getLabel();
 
